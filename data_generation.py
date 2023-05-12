@@ -9,20 +9,15 @@ from sampler import *
 import os
 import time
 
-
-
-
+# NUMBER OF ITERATIONS
 n_iters = 10000
-
+# GENERATOR DS-SEQ
 _gen_ds = pd.read_csv('gen_0.txt', header = None)
-
-
-
+# SAMPLING STRATEGY
 methods = ['GSDS', 'GFDS', 'CSDS', 'CFDS']
-
+# SEQ LENGTH
 max_lens = [26,30,32]
-
-
+# SAMPLING
 for method in methods:
     for max_len in max_lens:
         start_time = time.time()
@@ -53,7 +48,6 @@ for method in methods:
             DF['sgRNA'] = _STR
             DF['bits'] = _BIN
             #DF.to_csv('{}/eff_{}_{}_{}.csv'.format(save_dir,_ds,max_len,len(DF)), index=False)
-
         end_time = time.time()
         running_time = end_time - start_time
         print("{}|{}|Time: {}|Successful Rate: {}".format(method,max_len,running_time, len(DF)/n_iters), "seconds")

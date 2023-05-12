@@ -1,7 +1,11 @@
 # Introduction
-
+CRISPR technology promises to revolutionize biomedical science and medicine, in which the merit of this advancement lies in its ability to edit genes with high precision and efficiency. gRNA design of the CRISPR-associated proteins is the key to advancing this technology but requires large computations due to the massive search space. This work introduces CRISPR-SCORE$^\copyright$ and \textit{DS}-CRISPR to address: (1) a robust scoring metric of the gRNA based on its intrinsic-genetic contents and (2) a cost-efficient and effective approaches to synthesize gRNA, respectively. First, we demonstrate that the proposed CRISPR-SCORE$^\copyright$ positively correlates with efficacy scores, evaluated using six publicly available databases. Second, we show that the synthesized database from \textit{DS}-CRISPR is quality in silico designed gRNAs, which could reduce the cost and improve the success of in \textit{vivo} or in \textit{vitro} experiments. 
 # Requirements
-
+```python
+python==3.7.0
+numpy==1.21.5
+sci-kit-learn==1.0.2
+```
 # Model Search Space
 ## Strategy 1
 ```python
